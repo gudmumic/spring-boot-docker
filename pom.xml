@@ -121,7 +121,7 @@
                         <!--mysql container-->
 						<image>
 							<name>mysql</name>
-                            <alias>mysqldb</alias>
+                            <alias>mysql_pageview_db</alias>
 							<run>
                                 <!--expose port for dn-->
 								<ports>
@@ -168,10 +168,10 @@
                                 </ports>
                                 <links>
                                     <link>myrabbitmq:rabbitmq</link>
-                                    <link>mysqldb:mysqldb</link>
+                                    <link>mysql:mysql_pageview_db</link>
                                 </links>
                                 <env>
-                                    <SPRING_DATASOURCE_URL>jdbc:mysql://mysqldb:3306/pageviewservice</SPRING_DATASOURCE_URL>
+                                    <SPRING_DATASOURCE_URL>jdbc:mysql://mysql_pageview_db:3306/pageviewservice</SPRING_DATASOURCE_URL>
                                     <SPRING_PROFILES_ACTIVE>mysql</SPRING_PROFILES_ACTIVE>
                                     <SPRING_RABBITMQ_HOST>rabbitmq</SPRING_RABBITMQ_HOST>
                                 </env>
