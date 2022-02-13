@@ -181,7 +181,7 @@
                                 </dependsOn>
                                 <wait>
                                     <http>
-                                        <url>http://localhost:8081/health</url>
+                                        <url>http://localhost:8081/actuator/health</url>
                                         <method>GET</method>
                                         <status>200..399</status>
                                     </http>
