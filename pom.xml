@@ -132,6 +132,11 @@
                                     <MYSQL_DATABASE>pageviewservice</MYSQL_DATABASE>
                                     <MYSQL_ALLOW_EMPTY_PASSWORD>yes</MYSQL_ALLOW_EMPTY_PASSWORD>
                                 </env>
+                                <volumes>
+                                    <bind>
+                                        <volume>/mnt/c/Users/michael.nielsen/development/training/udemy/docker/mysql-data:/var/lib/mysql</volume>
+                                    </bind>
+                                </volumes>
                                 <!--wait for db to start-->
                                 <wait>
                                     <time>10000</time>
