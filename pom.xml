@@ -101,7 +101,7 @@
 						<image>
 							<name>${docker.image.prefix}/${docker.image.name}</name>
 							<build>
-								<dockerFileDir>${project.basedir}/target/dockerfile/</dockerFileDir>
+								<dockerFileDir>${project.basedir}/src/main/docker/dockerfile/</dockerFileDir>
 
                                 <!--copies artficact to docker build dir in target-->
 								<assembly>
@@ -226,6 +226,7 @@
                     </execution>
                 </executions>
 			</plugin>
+<!--
             <plugin>
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>
@@ -247,12 +248,13 @@
                     <dependency>
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-all</artifactId>
-                        <!-- any version of Groovy \>= 1.5.0 should work here -->
+                        &lt;!&ndash; any version of Groovy \>= 1.5.0 should work here &ndash;&gt;
                         <version>2.4.8</version>
                         <scope>runtime</scope>
                     </dependency>
                 </dependencies>
             </plugin>
+-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
